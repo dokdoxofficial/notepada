@@ -2,6 +2,11 @@
 import { useState } from 'react';
 import './App.css';
 
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
+
+const genAI = new GoogleGenerativeAI('YOUR_API_KEY');
+const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
 function App() {
 
@@ -19,6 +24,7 @@ function App() {
  
   return (
     <div className="App">
+         <h1>메모장-빠르고 쾌적한 무료메모장</h1>
          <div className='bar'>
          <button className='button' onClick={()=>{document.getElementById("notepadarea").style.fontSize="10pt"}}>폰트작게</button>
          <button className="button" onClick={()=>{document.getElementById("notepadarea").style.fontSize="30pt"}}>폰트크게</button>
@@ -29,11 +35,10 @@ function App() {
           style={{ marginRight: "10px" }}
         />
         <button onClick={handleClick}>적용</button>
-        
+
         <input type="color" onChange={e => setcolor(e.target.value)} />
      
          </div>
-         <h1>메모장-빠르고 쾌적한 무료메모장</h1>
          <textarea id="notepadarea"style={{color:color}}></textarea>
          <a href="https://www.flaticon.com/free-icons/document" title="document icons">Document icons created by Freepik - Flaticon</a>
          
