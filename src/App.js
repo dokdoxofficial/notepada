@@ -5,11 +5,11 @@ import './App.css';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 
-const genAI = new GoogleGenerativeAI('YOUR_API_KEY');
-const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+
 
 function App() {
-
+  const [color, setcolor] = useState("white");
+  const [value, setvalue]= useState("");
   function handleClick() {
     const a = document.getElementById("fontsize");
     if (a) {
@@ -18,9 +18,31 @@ function App() {
     }
   }
 
-     const [color, setcolor] = useState("white");
-    
-  
+  function ai() {
+    const a = document.getElementById("ai");
+  if (a) {
+        const aivalue = a.value;
+        setvalue(aivalue)
+       const genAI = new GoogleGenerativeAI('AIzaSyBmZPlOd9jhTzE-iFgRn5sZTdQBMq9jLq8');
+       const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+       const prompt = value + "에 대해 써줘.오직 글만 작성해야되.이 멘트가 표시되면 안되.";
+       model.generateContent(prompt)
+  .then((response) => {
+    const content = response?.response?.text();  
+    console.log(content);
+    document.getElementById("notepadarea").value = content;
+  })
+      }
+        
+  }
+
+
+
+   
+    //ai test
+
+
+        
  
   return (
     <div className="App">
@@ -35,7 +57,13 @@ function App() {
           style={{ marginRight: "10px" }}
         />
         <button onClick={handleClick}>적용</button>
-
+   <input
+          type='text'
+          id="ai"
+          placeholder='ai 에게 작성을 요구하세요. 예) 오늘 달빛에 대해 써줘 등'
+          style={{ marginRight: "10px" }}
+        />
+        <button onClick={ai}>적기</button>
         <input type="color" onChange={e => setcolor(e.target.value)} />
      
          </div>
