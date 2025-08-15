@@ -6,7 +6,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 function App() {
   const [color, setcolor] = useState("white");
-  const [value, setvalue]= useState("");
+  const [value, setvalue]= useState("필기");
   const [loading, setloading] = useState("환영합니다!😀지금 즉시 메모해보세요.");
   function handleClick() {
     const a = document.getElementById("fontsize");
@@ -17,15 +17,15 @@ function App() {
   }
 
   function ai() {
-    const aori = document.getElementById("ai");
-    const a = String(aori)
+    const a = document.getElementById("ai")
+  
   if (a) {
-       setloading("로딩중")
        const aivalue = a.value;
        setvalue(aivalue)
+       setloading("로딩중")
        const genAI = new GoogleGenerativeAI(process.env.REACT_APP_API_KEY);
        const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
-       const prompt = value + "에 대해 써줘.오직 글만 작성해야되.이 멘트가 표시되면 안되.";
+       const prompt = value + "에 대한 글을 199자 로 작성";
        model.generateContent(prompt)
        
   .then((response) => {
@@ -38,14 +38,6 @@ function App() {
         
   }
 
-
-
-   
-    //ai test
-
-
-        
- 
   return (
     <div className="App">
          <h1>메모장-빠르고 쾌적한 무료메모장</h1>
