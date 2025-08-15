@@ -8,6 +8,8 @@ function App() {
   const [color, setcolor] = useState("white");
   const [value, setvalue]= useState("필기");
   const [loading, setloading] = useState("환영합니다!😀지금 즉시 메모해보세요.");
+  //실험적 기능
+  const [arr, setArr] = useState([]);
   function handleClick() {
     const a = document.getElementById("fontsize");
     if (a) {
@@ -45,6 +47,7 @@ function App() {
           <h5>{loading}</h5>
          </div>
          <div className='bar'>
+         <button onClick={() => setArr([...arr, 1])}>새로운 메모를 추가</button>
          <button onClick={()=>{document.getElementById("notepadarea").style.fontSize="10pt"}}>글자작게</button>
          <button onClick={()=>{document.getElementById("notepadarea").style.fontSize="30pt"}}>글자크게</button>
          <input
@@ -62,8 +65,10 @@ function App() {
         />
          <button onClick={ai}>작성요청</button>
          <input type="color" onChange={e => setcolor(e.target.value)} />
+         
          </div>
          <textarea id="notepadarea"style={{color:color}}></textarea>
+         {arr.map(() => <textarea id='textarea' style={{color}}></textarea>)}
          <h5>저작자표시</h5>
          <a href="https://www.flaticon.com/free-icons/document" title="document icons">Document icons created by Freepik - Flaticon</a>
          
