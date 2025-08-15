@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'm';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'font-gmarket';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 body{
-  font-family: m;
+  font-family: font-gmarket;
   background-color: rgba(0, 0, 0, 0.84);
   color: white;
 }
@@ -17,9 +17,9 @@ textarea{
   background-color: rgb(0, 0, 0);
   color:white;
   font-size: 15pt;
-  width: 95%;
+  width: 99%;
   height: 500pt;
-  font-family: m;
+  font-family: font-gmarket;
   border:solid 2pt white;
 }
 .bar{
@@ -28,13 +28,23 @@ textarea{
   gap:20pt;
   background-color: white;
   color: black;
-}
-.button{
-  background-color: #00ff0000;
-  border:none;
-  font-family: m;
+  width: 99%;
 }
 a{
   color:white;
   text-decoration: white;
+}
+button{
+  background-color: rgb(196, 196, 196);
+  border:2px rgb(0, 0, 0) solid;
+}
+input{
+  background-color: rgb(255, 255, 255);
+  border:2px rgb(0, 0, 0) solid;
+}
+.loadingbox{
+  background-color: darkslategrey;
+  color:rgb(255, 252, 252);
+  border:2px rgb(0, 0, 0) solid;
+  width: 99%;
 }
