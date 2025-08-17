@@ -4,24 +4,28 @@ import './App.css';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 
+
 function App() {
+  //usestate 
   const [color, setcolor] = useState("white");
   const [value, setvalue]= useState("필기");
   const [loading, setloading] = useState("환영합니다!😀지금 즉시 메모해보세요.");
-  //실험적 기능
-  const [arr, setArr] = useState([]);
+  //variable
+  // eslint-disable-next-line 
+  var no = document.getElementById("notepadarea").value  
+  const a = document.getElementById("fontsize");
   function handleClick() {
-    const a = document.getElementById("fontsize");
+  
     if (a) {
       const size = a.value;
       document.getElementById("notepadarea").style.fontSize = size + "pt";
     }
   }
 
-  function ai() {
-    const a = document.getElementById("ai")
+function ai() {
+    const ai = document.getElementById("ai")
   
-  if (a) {
+  if (ai) {
        const aivalue = a.value;
        setvalue(aivalue)
        setloading("로딩중")
@@ -31,23 +35,28 @@ function App() {
        model.generateContent(prompt)
        
   .then((response) => {
-    const content = response?.response?.text();  
-    console.log(content);
+    const content = response?.response?.text(); 
     document.getElementById("notepadarea").value = content;
     setloading("완료!작성된 내용을 확인할수있습니다.")
   })
       }
         
-  }
+  }   
+ 
+   
+  //저장기능
 
-  return (
+
+
+
+
+  return(
     <div className="App">
          <h1>메모장-빠르고 쾌적한 무료메모장</h1>
          <div className='loadingbox'>
           <h5>{loading}</h5>
          </div>
          <div className='bar'>
-         <button onClick={() => setArr([...arr, 1])}>새로운 메모를 추가</button>
          <button onClick={()=>{document.getElementById("notepadarea").style.fontSize="10pt"}}>글자작게</button>
          <button onClick={()=>{document.getElementById("notepadarea").style.fontSize="30pt"}}>글자크게</button>
          <input
@@ -67,8 +76,8 @@ function App() {
          <input type="color" onChange={e => setcolor(e.target.value)} />
          
          </div>
-         <textarea id="notepadarea"style={{color:color}}></textarea>
-         {arr.map(() => <textarea id='textarea' style={{color}}></textarea>)}
+         <textarea id="notepadarea"style={{color:color}} ></textarea>
+
          <h5>저작자표시</h5>
          <a href="https://www.flaticon.com/free-icons/document" title="document icons">Document icons created by Freepik - Flaticon</a>
          
