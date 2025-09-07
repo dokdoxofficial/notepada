@@ -42,9 +42,13 @@ input{
   background-color: rgb(255, 255, 255);
   border:2px rgb(0, 0, 0) solid;
 }
-.loadingbox{
+.loading{
   background-color: darkslategrey;
   color:rgb(255, 252, 252);
   border:2px rgb(0, 0, 0) solid;
   width: 99%;
+}
+img{
+  width: 200pt;
+  height: 200pt;
 }
