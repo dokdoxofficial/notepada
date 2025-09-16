@@ -52,3 +52,7 @@ img{
   width: 200pt;
   height: 200pt;
 }
+footer{
+  border:2px white solid;
+  width: 99%;
+}

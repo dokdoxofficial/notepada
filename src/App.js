@@ -89,9 +89,13 @@ window.addEventListener("load", () => {
 
          
          </div>
-         <textarea id="notepadarea"style={{color:color}}></textarea>  
-         <h5>copyright</h5>
-         <a href="https://www.flaticon.com/free-icons/document" title="document icons">Document icons created by Freepik - Flaticon</a>
+         <textarea id="notepadarea"style={{color:color}}></textarea>
+         <footer>
+         <h4>copyright</h4>
+         <a href="https://www.flaticon.com/free-icons/document" title="document icons"><h5>Document icons created by Freepik - Flaticon</h5></a>
+         <h4>version</h4>
+         <h5>notepadx-v2.0.0</h5>
+         </footer>
  
     </div>
   );
