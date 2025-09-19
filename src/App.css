@@ -1,9 +1,9 @@
-@font-face {
-  font-family: 'font-gmarket';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+  @font-face {
+    font-family: 'font-gmarket';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: 900;
+    font-display: swap;
+  }
 body{
   font-family: font-gmarket;
   background-color: rgba(0, 0, 0, 0.84);
@@ -37,10 +37,12 @@ a{
 button{
   background-color: rgb(196, 196, 196);
   border:2px rgb(0, 0, 0) solid;
+  font-family: font-gmarket;
 }
 input{
   background-color: rgb(255, 255, 255);
   border:2px rgb(0, 0, 0) solid;
+  font-family: font-gmarket;
 }
 .loading{
   background-color: rgb(58, 74, 43);
