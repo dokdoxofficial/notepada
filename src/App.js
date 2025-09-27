@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './App.css';
 import { GoogleGenerativeAI } from "@google/generative-ai";
+//get image
+import savelogo from './savelogo.png'
 
 function App() {
   //usestate
@@ -63,12 +65,8 @@ window.addEventListener("load", () => {
 
   return (
     <div className="App">
-         <h1>메모장-빠르고 쾌적한 무료메모장</h1>
-         <div className='loading' id ="loading">
-          <h5>{loading}</h5>
-          <h5>{va}</h5>
-         </div>
-         <div className='bar'>
+         <img src = {savelogo} alt="저장/공유/도움말 등을 확인할려면 이 버튼을 클릭하세요." id='savelogo'></img>
+         <div className='bar'> 
          <button onClick={()=>{document.getElementById("notepadarea").style.fontSize="10pt"}}>글자작게</button>
          <button onClick={()=>{document.getElementById("notepadarea").style.fontSize="30pt"}}>글자크게</button>
          <input
@@ -89,12 +87,16 @@ window.addEventListener("load", () => {
 
          
          </div>
+
+         <div className='loading' id ="loading">
+          <h5>{loading}</h5>
+          <h5>{va}</h5>
+         </div> 
+
          <textarea id="notepadarea"style={{color:color}}></textarea>
          <footer>
-         <h4>copyright</h4>
          <a href="https://www.flaticon.com/free-icons/document" title="document icons"><h5>Document icons created by Freepik - Flaticon</h5></a>
-         <h4>version</h4>
-         <h5>notepadx-v2.0.0</h5>
+         <h5>notepada.netlify.app-notepada-v2.0.0</h5>
          </footer>
  
     </div>
