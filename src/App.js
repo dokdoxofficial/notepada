@@ -65,6 +65,7 @@ window.addEventListener("load", () => {
 
   return (
     <div className="App">
+         <h1>무료온라인메모장</h1>
          <img src = {savelogo} alt="저장/공유/도움말 등을 확인할려면 이 버튼을 클릭하세요." id='savelogo'></img>
          <div className='bar'> 
          <button onClick={()=>{document.getElementById("notepadarea").style.fontSize="10pt"}}>글자작게</button>
