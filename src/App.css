@@ -24,7 +24,6 @@ textarea{
 }
 .bar{
   display: flex;
-  border:solid 3pt blue;
   gap:20pt;
   background-color: white;
   color: black;
@@ -57,7 +56,38 @@ img{
 footer{
   width: 99%;
 }
+
 #savelogo{
   width:50px;
   height: 50px;
+  animation-name: fade_ani;
+  animation-duration: 1s;
+}
+
+@keyframes fade_ani {
+  from{
+     opacity: 0%;
+  }
+  to{
+     opacity: 100%;
+  }
+}
+
+@media print {
+  body {
+    background-color: white; /* 인쇄 시 배경색을 흰색으로 */
+    color: black; /* 인쇄 시 글자색을 검은색으로 */
+  }
+  button{
+    display: none;
+  }
+  input{
+    display: none;
+  }
+  h1{
+    display: none;
+  }
+  h5{
+    display: none;
+  }
 }

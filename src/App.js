@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import './App.css';
 import { GoogleGenerativeAI } from "@google/generative-ai";
-//get image
+import { Link } from "react-router-dom";
+//import image
 import savelogo from './savelogo.png'
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
        setloading("작성하는중...(1/1)")
        const genAI = new GoogleGenerativeAI(process.env.REACT_APP_API_KEY);
        const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
-       const prompt = value + "에 대한 글을 199자 로 작성해주십시오.";
+       const prompt = aivalue + "에 대한 글을 199자 로 작성해주십시오.";
        model.generateContent(prompt)
        
   .then((response) => {
@@ -64,16 +65,19 @@ window.addEventListener("load", () => {
 
 
   return (
+
     <div className="App">
          <h1>무료온라인메모장</h1>
-         <img src = {savelogo} alt="저장/공유/도움말 등을 확인할려면 이 버튼을 클릭하세요." id='savelogo'></img>
+         <Link to="/save">
+         <img src={savelogo} id ="savelogo" alt='저장/공유 등을 할려면 이버튼을 클릭해주세요.'></img>
+         </Link>
          <div className='bar'> 
          <button onClick={()=>{document.getElementById("notepadarea").style.fontSize="10pt"}}>글자작게</button>
          <button onClick={()=>{document.getElementById("notepadarea").style.fontSize="30pt"}}>글자크게</button>
          <input
           type='text'
           id="fontsize"
-          placeholder='글자크기를 임력:예시)10,20 등'
+          placeholder='글자크기를 입력:예시)10,20 등'
           style={{ marginRight: "10px" }}
         />
         <button onClick={handleClick}>적용</button>        
@@ -86,7 +90,7 @@ window.addEventListener("load", () => {
         />
          <button onClick={ai}>작성요청</button>
 
-         
+         <button id="print" onClick={()=>{window.print()}}>인쇄</button>
          </div>
 
          <div className='loading' id ="loading">
@@ -99,8 +103,8 @@ window.addEventListener("load", () => {
          <a href="https://www.flaticon.com/free-icons/document" title="document icons"><h5>Document icons created by Freepik - Flaticon</h5></a>
          <h5>notepada.netlify.app-notepada-v2.0.0</h5>
          </footer>
- 
     </div>
+
   );
 }
 
