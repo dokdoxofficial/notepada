@@ -10,7 +10,7 @@ export default function Save() {
      </Link>
      <h3>공유</h3>
      <p>현재 작성한 노트를 공유하십시오.</p>
-     <button onClick={()=>{navigator.share("d")}}>공유</button>
+     <button onClick={()=>{navigator.share()}}>공유</button>
      <hr></hr>
      
  </>

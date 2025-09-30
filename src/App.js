@@ -67,7 +67,6 @@ window.addEventListener("load", () => {
   return (
 
     <div className="App">
-         <h1>무료온라인메모장</h1>
          <Link to="/save">
          <img src={savelogo} id ="savelogo" alt='저장/공유 등을 할려면 이버튼을 클릭해주세요.'></img>
          </Link>
