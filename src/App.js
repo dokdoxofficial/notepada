@@ -52,7 +52,7 @@ setInterval(() => {
   
   
   }
-}, 5000);
+}, 2400);
 
 // 페이지 로드 시 복원
 window.addEventListener("load", () => {
