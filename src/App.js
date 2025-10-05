@@ -67,6 +67,7 @@ window.addEventListener("load", () => {
   return (
 
     <div className="App">
+         
          <Link to="/save">
          <img src={savelogo} id ="savelogo" alt='저장/공유 등을 할려면 이버튼을 클릭해주세요.'></img>
          </Link>
@@ -88,19 +89,17 @@ window.addEventListener("load", () => {
           style={{ marginRight: "10px" }}
         />
          <button onClick={ai}>작성요청</button>
-
          <button id="print" onClick={()=>{window.print()}}>인쇄</button>
          </div>
 
          <div className='loading' id ="loading">
           <h5>{loading}</h5>
           <h5>{va}</h5>
-         </div> 
-
+         </div>
          <textarea id="notepadarea"style={{color:color}}></textarea>
          <footer>
          <a href="https://www.flaticon.com/free-icons/document" title="document icons"><h5>Document icons created by Freepik - Flaticon</h5></a>
-         <h5>notepada.netlify.app-notepada-v2.0.0</h5>
+         <h5>notepadx.netlify.app-notepadx-v2.5.0</h5>
          </footer>
     </div>
 
