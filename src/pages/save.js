@@ -1,5 +1,4 @@
 import '../App.css';
-import { Link } from "react-router-dom";
 //import image
 import savelogo from '../savelogo.png'
 
