@@ -17,7 +17,7 @@ export default function Save() {
      </Link>
      <h3>공유</h3>
      <p>현재 작성한 노트를 공유하십시오.</p>
-     <button onClick={()=>{navigator.share(data)}}>공유</button>
+     <button id="share" onClick={()=>{navigator.share(data)}}>공유</button>
      <hr></hr>
      <div id = "setting"></div>
      <h3>새로운 메모를 추가(새창에서)</h3>
