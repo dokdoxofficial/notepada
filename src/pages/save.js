@@ -12,7 +12,7 @@ export default function Save() {
   };
   return (
     <>
-     <a herf="https://notepadx.netlify.app">
+     <a href="https://notepadx.netlify.app">
          <img src={savelogo} id ="savelogo" alt='저장/공유 등을 할려면 이버튼을 클릭해주세요.' />
     </a>
      <h3>공유</h3>
