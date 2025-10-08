@@ -67,13 +67,12 @@ window.addEventListener("load", () => {
   return (
 
     <div className="App">
-         
          <Link to="/save">
          <img src={savelogo} id ="savelogo" alt='저장/공유 등을 할려면 이버튼을 클릭해주세요.'></img>
          </Link>
          <div className='bar'> 
-         <button onClick={()=>{document.getElementById("notepadarea").style.fontSize="10pt"}}>글자작게</button>
-         <button onClick={()=>{document.getElementById("notepadarea").style.fontSize="30pt"}}>글자크게</button>
+         <button onClick={()=>{document.getElementById("notepadarea").style.fontSize="10pt"}}><i class="fa-solid fa-minus"></i></button>
+         <button onClick={()=>{document.getElementById("notepadarea").style.fontSize="30pt"}}><i class="fa-solid fa-plus"></i></button>
          <input
           type='text'
           id="fontsize"
@@ -81,7 +80,7 @@ window.addEventListener("load", () => {
           style={{ marginRight: "10px" }}
         />
         <button onClick={handleClick}>적용</button>        
-        <input type="color" onChange={e => setcolor(e.target.value)} />
+        <input type="color" onChange={e => setcolor(e.target.value)}></input>
         <input
           type='text'
           id="ai"
@@ -89,7 +88,7 @@ window.addEventListener("load", () => {
           style={{ marginRight: "10px" }}
         />
          <button onClick={ai}>작성요청</button>
-         <button id="print" onClick={()=>{window.print()}}>인쇄</button>
+         <button id="print" onClick={()=>{window.print()}}><i class="fa-solid fa-print"></i></button>
          </div>
 
          <div className='loading' id ="loading">
@@ -98,8 +97,8 @@ window.addEventListener("load", () => {
          </div>
          <textarea id="notepadarea"style={{color:color}}></textarea>
          <footer>
-         <a href="https://www.flaticon.com/free-icons/document" title="document icons"><h5>Document icons created by Freepik - Flaticon</h5></a>
-         <h5>notepadx.netlify.app-notepadx-v2.5.0</h5>
+         <a href="https://www.flaticon.com/free-icons/document" title="document icons">Document icons created by Freepik - Flaticon</a>
+         <h5>notepadx.netlify.app-notepadx-v3.1.0</h5>
          </footer>
     </div>
 
