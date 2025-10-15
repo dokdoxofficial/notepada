@@ -30,7 +30,7 @@ function App() {
        setloading("작성하는중...(1/1)")
        const genAI = new GoogleGenerativeAI(process.env.REACT_APP_API_KEY);
        const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
-       const prompt = aivalue + "에 대한 글을 199자 로 작성해주십시오.";
+       const prompt = ""+aivalue + "";
        model.generateContent(prompt)
        
   .then((response) => {

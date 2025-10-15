@@ -69,6 +69,12 @@ footer{
   animation-name: fade_ani;
   animation-duration: 1s;
 }
+.update{
+  width: 90%;
+  height:600px;
+  background: url(park.jpeg);
+  background-position: center;
+}
 
 @keyframes fade_ani {
   from{

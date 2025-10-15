@@ -17,9 +17,9 @@ export default function Save() {
      <p>현재 작성한 노트를 공유하십시오.</p>
      <button id="share" onClick={()=>{navigator.share(data)}}><i class="fa-solid fa-share-nodes"></i></button>
      <hr></hr>
-     <div id="update">
+     <div className="update">
       <h3>새로운 기능</h3>
-      <h4>이제 여러분의 메모를 다른이에게 공유해보세요.</h4>
+      <h4>이제 여러분의 메모를 다른이에게 공유해보세요.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
      </div>
      
  </>
